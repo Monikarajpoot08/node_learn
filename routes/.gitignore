@@ -1,0 +1,7 @@
+#Ignore node_modules directory
+#this will prevent the node_modules directory from being tracked by git, 
+#which is important because it can be very large and is typically not necessary to include in version control.
+
+node_modules/
+
+#other entries
