@@ -11,14 +11,18 @@ app.get('/', (req, res) => {
 })
 //ek get method jisse pura person ka data milega
 // // GET method to get the person data from the database
+
 // importing routers
-const personRoutes = require('./routes/personRoutes'); // importing the routes for the person collection from the personRoutes.js file
+const personRoutes = require('./routes/personRoutes'); 
+app.use('/person', personRoutes);
+
+// importing the routes for the person collection from the personRoutes.js file
 const menuRoutes = require('./routes/menuRoutes'); 
 // use the routers
-app.use('/person', personRoutes);
 app.use('/menu', menuRoutes); 
 // ye middleware h jo menuRoutes ko use krta h
   
+
 // jb koi /menu pr get request bhejega to usse ye milega  
 
 app.listen(3000, () => {
