@@ -3,5 +3,5 @@
 #which is important because it can be very large and is typically not necessary to include in version control.
 
 node_modules/
-
+.env
 #other entries
