@@ -24,6 +24,7 @@ app.use('/person', personRoutes);
 // importing the routes for the person collection from the personRoutes.js file
 const menuRoutes = require('./routes/menuRoutes'); 
 // use the routers
+
 app.use('/menu', menuRoutes); 
 // ye middleware h jo menuRoutes ko use krta h
 

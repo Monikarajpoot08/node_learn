@@ -13,6 +13,9 @@ const db=mongoose.connection;
     // jb tumhara database successfully connect ho jata h to ye event trigger hota h and uske baad hum console me message print krte h
 db.once('connected', function() {
       console.log('Connected to MongoDB successfully!');
+      console.log('Connected to host:', db.host);
+      console.log('Connected to port:', db.port);
+      console.log('Connected to database:', db.name);
     }); 
     //similarly, agar connection me koi error aata h to ye event trigger hota h and uske baad hum console me error message print krte h
 db.on('error', function(err) {

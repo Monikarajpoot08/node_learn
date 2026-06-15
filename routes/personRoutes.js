@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
 })
 
 
-router.post('/person', async (req, res) => {
+router.post('/', async (req, res) => {
     try {
  
           const data = req.body; // post request me data ko body se le rhe h
@@ -68,8 +68,8 @@ router.get('/:workType',async (req,res)=>{
 
 router.put('/:id',async(req,res)=>{
   try{
-       const personId=req.params.id;
-       const updatedPersonData=req.body;
+       const personId=req.params.id; //extract the id from the url parameter
+       const updatedPersonData=req.body; //extract that unupdated data
        const response=await Person.findByIdAndUpdate(personId,updatedPersonData,{
           new:true,
           runValidators:true
