@@ -18,15 +18,15 @@ const menuItemSchema = new mongoose.Schema({
   },
 is_drink: {
     type: Boolean,
-    default: false // by default, it is not a drink if user does not specify it
+    default: false 
   },
   ingredients: {
-    type: [String], // array of strings to store multiple ingredients
-    default: [] // default value is an empty array if user does not specify any ingredients
+    type: [String], 
+    default: [] 
   },
   num_sales: {
     type: Number,
-    default: 0 // by default, the number of sales is 0 when a new menu item is created
+    default: 0
   }
 });
 
